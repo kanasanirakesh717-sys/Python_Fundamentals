@@ -1,8 +1,8 @@
 # Python_Fundamentals
 This is for python Functions Scudo-codes and build in functions and methods
-<!-- LIST -->
+## LIST  
 Def: List is kind of array use to store the multipule values with different data-types
-<!-- Build in Methods -->
+## Build in Methods
 age = [25, 30, 35, 25, 30, 455]
 
 1) age.append(10) = [25, 30, 35, 25, 30, 455, 10]
