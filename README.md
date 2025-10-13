@@ -99,3 +99,77 @@ It is the combination of unicode characters closed with singel r double cots,Its
 
 22) string.isupper() = False
     → True if all characters are uppercase.
+
+
+
+## Tuple
+It is like a array immutabule and ordered,Items are enclosed in parentheses `( )` and separated by commas.  
+
+## Build in methods Tuple
+
+my_tuple = (10, 20, 30, 40, 50)
+
+------------------------------------------------------------
+# Tuple Methods Examples
+
+1) my_tuple.count(20) = 1
+   → Counts how many times 20 appears.
+
+2) my_tuple.index(30) = 2
+   → Returns the index of the first occurrence of 30.
+
+------------------------------------------------------------
+# Tuple Operations & Examples
+
+3) Concatenation:
+t1 = (1, 2)
+t2 = (3, 4)
+t3 = t1 + t2 = (1, 2, 3, 4)
+
+4) Repetition:
+t1 = (1, 2)
+t2 = t1 * 3 = (1, 2, 1, 2, 1, 2)
+
+5) Membership Test:
+5 in (1, 2, 3, 4, 5) = True
+6 not in (1, 2, 3) = True
+
+6) Indexing:
+t = (10, 20, 30)
+t[0] = 10
+t[-1] = 30
+
+7) Slicing:
+t = (10, 20, 30, 40, 50)
+t[1:4] = (20, 30, 40)
+t[:3] = (10, 20, 30)
+t[::2] = (10, 30, 50)
+t[::-1] = (50, 40, 30, 20, 10)
+
+8) Length:
+len((1, 2, 3, 4)) = 4
+
+9) Min / Max:
+min((10, 20, 5)) = 5
+max((10, 20, 5)) = 20
+
+10) Convert from List:
+list1 = [1, 2, 3]
+tuple(list1) = (1, 2, 3)
+
+11) Convert from String:
+tuple("hello") = ('h', 'e', 'l', 'l', 'o')
+
+12) Nested Tuples:
+t = ((1, 2), (3, 4))
+t[1][0] = 3
+
+------------------------------------------------------------
+# Tuple Immutability Example
+# Tuples are read-only, you cannot append or remove directly.
+t = (1, 2, 3)
+lst = list(t)      # Convert to list
+lst.append(4)      
+t = tuple(lst)     # Convert back to tuple
+# t = (1, 2, 3, 4)
+
