@@ -145,3 +145,14 @@ print("Original Set:", numbers)
 12) y.issuperset(x) = True if y ⊇ x
 13) m.isdisjoint(n) = True if no common elements
 14) y.copy() = shallow copy of set
+
+
+
+# Python Data Types – Quick Comparison
+
+| Data Type | Ordered | Mutable | Allows Duplicates | Syntax   |
+|-----------|---------|--------|-----------------|-------------|
+| List      | ✅ Yes  | ✅ Yes | ✅ Yes           | [ ]         |
+| Tuple     | ✅ Yes  | ❌ No  | ✅ Yes           | ( )         |
+| String    | ✅ Yes  | ❌ No  | ✅ Yes (chars)   | " " or ' '  |
+| Set       | ❌ No   | ✅ Yes | ❌ No            | { }         |
