@@ -147,6 +147,28 @@ print("Original Set:", numbers)
 14) y.copy() = shallow copy of set
 
 
+🔹 DICT
+
+Definition:
+.It is like a key-pair value, unordered and mutabule,dupliate keys were not allowed
+
+### 🧠 Example & Built-in Methods
+person = {"name": "Alice", "age": 25, "city": "Chennai"}
+
+person["email"] = "alice@example.com"            # Add key-value
+person.update({"age": 26, "city": "Chennai"})   # Update/add multiple keys
+
+person.get("name")        # Returns value or None if key absent
+person.setdefault("age", 30)  # Returns value if key exists, else adds key with default
+
+person.keys()             # dict_keys(['name', 'email'])
+person.values()           # dict_values(['Alice', 'alice@example.com'])
+person.items()            # dict_items([('name', 'Alice'), ('email', 'alice@example.com')])
+
+temp = person.copy()      # Creates a shallow copy
+temp.clear()              # Clears the copied dictionary
+
+
 
 # Python Data Types – Quick Comparison
 
