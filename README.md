@@ -178,3 +178,27 @@ temp.clear()              # Clears the copied dictionary
 | Tuple     | ✅ Yes  | ❌ No  | ✅ Yes           | ( )         |
 | String    | ✅ Yes  | ❌ No  | ✅ Yes (chars)   | " " or ' '  |
 | Set       | ❌ No   | ✅ Yes | ❌ No            | { }         |
+
+
+
+🧠 Python Conditional Statements (if, elif, else)
+
+Conditional statements are used to make decisions in a program.
+
+✅ Syntax
+if condition:
+    # code if condition is True
+elif another_condition:
+    # code if first condition is False and this one is True
+else:
+    # code if all conditions are False
+
+💡 Example
+age = 20
+
+if age < 18:
+    print("You are a minor")
+elif age >= 18 and age < 60:
+    print("You are an adult")
+else:
+    print("You are a senior citizen")
