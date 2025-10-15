@@ -270,3 +270,100 @@ match operation:
         print(a / b)
     case _:
         print("Invalid operation")
+        
+
+🔁 Python Loops
+
+Loops are used to repeat a block of code multiple times.
+
+🌀 For Loop
+
+Used when you know how many times to run the loop.
+
+for i in range(1, 6):
+    print(i)
+
+
+➡ Prints numbers from 1 to 5
+
+Even numbers example:
+
+for i in range(1, 11):
+    if i % 2 == 0:
+        print(i)
+
+🔄 While Loop
+
+Used when you want to run code until a condition becomes false.
+
+n = 5
+total = 0
+count = 1
+while count <= n:
+    total += count
+    count += 1
+print(total)   # 15
+
+⭐ Nested Loops
+
+A loop inside another loop.
+
+n = 5
+for i in range(1, n+1):
+    for j in range(i):
+        print("*", end=" ")
+    print()
+
+
+Output:
+
+*
+* *
+* * *
+* * * *
+* * * * *
+
+
+⚙️ Python Loop Control Statements
+
+These statements change the normal flow of loops.
+
+🔹 break
+
+Stops the loop immediately when the condition is true.
+
+for i in range(1, 11):
+    if i == 6:
+        break
+    print(i)
+# Output: 1 2 3 4 5
+
+🔹 continue
+
+Skips the current iteration and moves to the next one.
+
+for i in range(1, 11):
+    if i == 5:
+        continue
+    print(i)
+# Output: 1 2 3 4 6 7 8 9 10
+
+🔹 pass
+
+Does nothing — used as a placeholder.
+
+for i in range(1, 11):
+    if i % 2 == 0:
+        pass
+    else:
+        print(i)
+# Output: 1 3 5 7 9
+
+
+✅ Summary
+
+break → stop loop
+
+continue → skip iteration
+
+pass → do nothing
