@@ -1,9 +1,14 @@
-🔹 LIST
+# 🐍 Python_Fundamentals
+This repository covers Python fundamentals including functions, pseudo-codes, and built-in methods for data types.
 
-Definition:
-A List is a type of array used to store multiple values with different data types.
+---
 
-🧠 Example & Built-in Methods
+## 🔹 LIST  
+**Definition:**  
+List is a kind of array used to store multiple values with different data types.
+
+### 🧠 Example & Built-in Methods
+```python
 age = [25, 30, 35, 25, 30, 455]
 
 1) age.append(10) = [25, 30, 35, 25, 30, 455, 10]
@@ -27,13 +32,13 @@ age = [25, 30, 35, 25, 30, 455]
 19) age[::2] = [25, 35, 30]
 20) age[::-1] = [455, 30, 25, 35, 30, 25]
 
-🔹 STRING
 
-Definition:
-A String is a combination of Unicode characters enclosed in single or double quotes.
-Immutable — cannot be modified once created.
+## 🔹 STRING
+**Definition:**  
+A string is a combination of Unicode characters enclosed within single or double quotes.
+It is immutable — once created, it cannot be modified.
 
-🧠 Example & Built-in Methods
+### 🧠 Example & Built-in Methods
 1) string.capitalize() = "Hello world"
 2) string.upper() = "HELLO WORLD"
 3) string.lower() = "hello world"
@@ -57,13 +62,16 @@ Immutable — cannot be modified once created.
 21) string.islower() = True
 22) string.isupper() = False
 
-🔹 TUPLE
 
-Definition:
-A Tuple is an immutable ordered array. Items are enclosed in parentheses ( ) and separated by commas.
 
-🧠 Example & Built-in Methods
+## 🔹 TUPLE
+**Definition:**  
+Tuple is like an array that is immutable and ordered.
+Items are enclosed in parentheses ( ) and separated by commas.
+
+### 🧠 Example & Built-in Methods
 my_tuple = (10, 20, 30, 40, 50)
+
 1) my_tuple.count(20) = 1
 2) my_tuple.index(30) = 2
 
@@ -106,82 +114,88 @@ tuple("hello") = ('h', 'e', 'l', 'l', 'o')
 t = ((1, 2), (3, 4))
 t[1][0] = 3
 
-# Modify tuple via list
+# Tuples are read-only; to modify, convert to list
 t = (1, 2, 3)
 lst = list(t)
 lst.append(4)
-t = tuple(lst)  # Result: (1, 2, 3, 4)
+t = tuple(lst)
+# Result: t = (1, 2, 3, 4)
+
 
 🔹 SET
 
 Definition:
-A Set is an unordered mutable collection that does not allow duplicates. Curly braces {} are used.
+A Set is an unordered, mutable collection that does not allow duplicates.
+Sets are written using curly braces {}.
 
-🧠 Example & Methods
 numbers = {10, 20, 30, 40, 50}
+print("Original Set:", numbers)
 
 1) numbers.add(60) = {10, 20, 30, 40, 50, 60}
 2) numbers.update([70, 80]) = {10, 20, 30, 40, 50, 60, 70, 80}
-3) numbers.remove(20)
-4) numbers.discard(30)
-5) numbers.pop()
-6) temp = numbers.copy(); temp.clear()
-7) a.union(b)
-8) a.intersection(b)
-9) a.difference(b)
-10) a.symmetric_difference(b)
-11) x.issubset(y)
-12) y.issuperset(x)
-13) m.isdisjoint(n)
-14) y.copy()
+3) numbers.remove(20) = removes 20 from set
+4) numbers.discard(30) = removes 30 if present (no error if absent)
+5) numbers.pop() = removes a random element
+6) temp = numbers.copy(); temp.clear() = set()
+7) a.union(b) = combines unique elements
+8) a.intersection(b) = common elements
+9) a.difference(b) = elements only in a
+10) a.symmetric_difference(b) = elements in either set, not both
+11) x.issubset(y) = True if x ⊆ y
+12) y.issuperset(x) = True if y ⊇ x
+13) m.isdisjoint(n) = True if no common elements
+14) y.copy() = shallow copy of set
+
 
 🔹 DICT
 
 Definition:
-A Dictionary is an unordered mutable collection of key-value pairs. Duplicate keys are not allowed.
+.It is like a key-pair value, unordered and mutabule,dupliate keys were not allowed
 
-🧠 Example & Built-in Methods
+### 🧠 Example & Built-in Methods
 person = {"name": "Alice", "age": 25, "city": "Chennai"}
 
-# Adding/Updating
-person["email"] = "alice@example.com"
-person.update({"age": 26, "city": "Chennai"})
+person["email"] = "alice@example.com"            # Add key-value
+person.update({"age": 26, "city": "Chennai"})   # Update/add multiple keys
 
-# Accessing
-person.get("name")
-person.setdefault("age", 30)
+person.get("name")        # Returns value or None if key absent
+person.setdefault("age", 30)  # Returns value if key exists, else adds key with default
 
-# Keys, Values, Items
-person.keys()
-person.values()
-person.items()
+person.keys()             # dict_keys(['name', 'email'])
+person.values()           # dict_values(['Alice', 'alice@example.com'])
+person.items()            # dict_items([('name', 'Alice'), ('email', 'alice@example.com')])
 
-# Copy & Clear
-temp = person.copy()
-temp.clear()
+temp = person.copy()      # Creates a shallow copy
+temp.clear()              # Clears the copied dictionary
 
-🔹 Python Data Types – Quick Comparison
-Data Type	Ordered	Mutable	Allows Duplicates	Syntax
-List	✅ Yes	✅ Yes	✅ Yes	[ ]
-Tuple	✅ Yes	❌ No	✅ Yes	( )
-String	✅ Yes	❌ No	✅ Yes (chars)	" " or ' '
-Set	❌ No	✅ Yes	❌ No	{ }
-🔹 Python Conditional Statements (if, elif, else)
 
-Definition:
-Used to make decisions in a program.
 
+# Python Data Types – Quick Comparison
+
+| Data Type | Ordered | Mutable | Allows Duplicates | Syntax   |
+|-----------|---------|--------|-----------------|-------------|
+| List      | ✅ Yes  | ✅ Yes | ✅ Yes           | [ ]         |
+| Tuple     | ✅ Yes  | ❌ No  | ✅ Yes           | ( )         |
+| String    | ✅ Yes  | ❌ No  | ✅ Yes (chars)   | " " or ' '  |
+| Set       | ❌ No   | ✅ Yes | ❌ No            | { }         |
+
+
+
+🧠 Python Conditional Statements (if, elif, else)
+
+Conditional statements are used to make decisions in a program.
+
+✅ Syntax
 if condition:
-    # code if True
+    # code if condition is True
 elif another_condition:
-    # code if first is False & this is True
+    # code if first condition is False and this one is True
 else:
-    # code if all False
+    # code if all conditions are False
 
-
-Example:
-
+💡 Example
 age = 20
+
 if age < 18:
     print("You are a minor")
 elif age >= 18 and age < 60:
@@ -189,12 +203,24 @@ elif age >= 18 and age < 60:
 else:
     print("You are a senior citizen")
 
-🔹 Python Nested if Statements
 
-Definition:
-Writing one if inside another for multiple related checks.
 
+🧠 Python Nested if Statements
+
+Nested if means writing one if statement inside another to check multiple related conditions.
+
+✅ Syntax
+if condition1:
+    if condition2:
+        # code when both are True
+    else:
+        # code when only first is True
+else:
+    # code when first is False
+
+💡 Example
 num = 10
+
 if num > 0:
     if num % 2 == 0:
         print("Positive Even")
@@ -203,39 +229,62 @@ if num > 0:
 else:
     print("Negative Number")
 
-🔹 Python match-case (Switch Case)
 
-Definition:
-Introduced in Python 3.10 as an alternative to multiple if-elif-else.
+🧩 Python match-case (Switch Case)
 
+match-case in Python (introduced in Python 3.10) is used as an alternative to multiple if-elif-else statements.
+It allows you to compare one expression against multiple values in a cleaner way.
+
+✅ Syntax:
 match variable:
     case value1:
-        # code
+        # code block
     case value2:
-        # code
+        # code block
     case _:
-        # default
+        # default case (like else)
 
-
-Example:
-
+💡 Example 1:
 day = "3"
 match day:
-    case "1": print("Monday")
-    case "2": print("Tuesday")
-    case "3": print("Wednesday")
-    case _: print("Invalid day")
+    case "1":
+        print("Monday")
+    case "2":
+        print("Tuesday")
+    case "3":
+        print("Wednesday")
+    case _:
+        print("Invalid day")
 
-🔹 Python Loops
+💡 Example 2:
+operation = "+"
+a, b = 10, 5
+match operation:
+    case "+":
+        print(a + b)
+    case "-":
+        print(a - b)
+    case "*":
+        print(a * b)
+    case "/":
+        print(a / b)
+    case _:
+        print("Invalid operation")
+        
 
-Definition: Loops repeat a block of code multiple times.
+🔁 Python Loops
+
+Loops are used to repeat a block of code multiple times.
 
 🌀 For Loop
+
+Used when you know how many times to run the loop.
+
 for i in range(1, 6):
     print(i)
 
 
-Prints numbers from 1 to 5.
+➡ Prints numbers from 1 to 5
 
 Even numbers example:
 
@@ -244,15 +293,21 @@ for i in range(1, 11):
         print(i)
 
 🔄 While Loop
+
+Used when you want to run code until a condition becomes false.
+
 n = 5
 total = 0
 count = 1
 while count <= n:
     total += count
     count += 1
-print(total)  # 15
+print(total)   # 15
 
 ⭐ Nested Loops
+
+A loop inside another loop.
+
 n = 5
 for i in range(1, n+1):
     for j in range(i):
@@ -268,13 +323,14 @@ Output:
 * * * *
 * * * * *
 
-🔹 Python Loop Control Statements
 
-Definition: Control the flow of loops.
+⚙️ Python Loop Control Statements
+
+These statements change the normal flow of loops.
 
 🔹 break
 
-Stops the loop immediately.
+Stops the loop immediately when the condition is true.
 
 for i in range(1, 11):
     if i == 6:
@@ -284,7 +340,7 @@ for i in range(1, 11):
 
 🔹 continue
 
-Skips the current iteration.
+Skips the current iteration and moves to the next one.
 
 for i in range(1, 11):
     if i == 5:
@@ -294,7 +350,7 @@ for i in range(1, 11):
 
 🔹 pass
 
-Does nothing — placeholder.
+Does nothing — used as a placeholder.
 
 for i in range(1, 11):
     if i % 2 == 0:
@@ -303,7 +359,8 @@ for i in range(1, 11):
         print(i)
 # Output: 1 3 5 7 9
 
-⚙️ Summary
+
+✅ Summary
 
 break → stop loop
 
