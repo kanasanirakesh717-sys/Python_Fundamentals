@@ -1,22 +1,23 @@
-# num = int(input("Enter a number: "))
+num = int(input("Enter a number: "))
 
-# if num>=0:
-#     if num%2==0:
-#         print("The number is positive and even.")
-#     else:
-#         print("The number is positive and odd.")
-# else:
-#     print("The number is negative.")
+if num>=0:
+    if num%2==0:
+        print("The number is positive and even.")
+    else:
+        print("The number is positive and odd.")
+else:
+    print("The number is negative.")
 
-# username = input("Enter username:  ")
-# password = input("Enter password:  ")
-# if username == "admin":
-#     if username =="admin" and password=="admin123":
-#         print("Login successful")
-#     elif username =="admin" or password=="admin123":
-#         print("Incorrect password")
-# else:
-#     print("Invalid username")
+username = input("Enter username:  ")
+password = input("Enter password:  ")
+
+if username == "admin":
+    if username =="admin" and password=="admin123":
+        print("Login successful")
+    elif username =="admin" or password=="admin123":
+        print("Incorrect password")
+else:
+    print("Invalid username")
 
 marks = int(input("Enter your marks: "))    
 if marks>=35:

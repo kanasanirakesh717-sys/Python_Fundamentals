@@ -228,3 +228,45 @@ if num > 0:
         print("Positive Odd")
 else:
     print("Negative Number")
+
+
+🧩 Python match-case (Switch Case)
+
+match-case in Python (introduced in Python 3.10) is used as an alternative to multiple if-elif-else statements.
+It allows you to compare one expression against multiple values in a cleaner way.
+
+✅ Syntax:
+match variable:
+    case value1:
+        # code block
+    case value2:
+        # code block
+    case _:
+        # default case (like else)
+
+💡 Example 1:
+day = "3"
+match day:
+    case "1":
+        print("Monday")
+    case "2":
+        print("Tuesday")
+    case "3":
+        print("Wednesday")
+    case _:
+        print("Invalid day")
+
+💡 Example 2:
+operation = "+"
+a, b = 10, 5
+match operation:
+    case "+":
+        print(a + b)
+    case "-":
+        print(a - b)
+    case "*":
+        print(a * b)
+    case "/":
+        print(a / b)
+    case _:
+        print("Invalid operation")
