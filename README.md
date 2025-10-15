@@ -202,3 +202,29 @@ elif age >= 18 and age < 60:
     print("You are an adult")
 else:
     print("You are a senior citizen")
+
+
+
+🧠 Python Nested if Statements
+
+Nested if means writing one if statement inside another to check multiple related conditions.
+
+✅ Syntax
+if condition1:
+    if condition2:
+        # code when both are True
+    else:
+        # code when only first is True
+else:
+    # code when first is False
+
+💡 Example
+num = 10
+
+if num > 0:
+    if num % 2 == 0:
+        print("Positive Even")
+    else:
+        print("Positive Odd")
+else:
+    print("Negative Number")
