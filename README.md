@@ -367,3 +367,29 @@ break → stop loop
 continue → skip iteration
 
 pass → do nothing
+
+
+
+🐍 Python Functions (def)
+
+A function is a reusable block of code defined with the def keyword. It runs only when it is called. You can pass data, known as parameters (or arguments), into a function. A function can also return data as a result.
+
+✅ Syntax:
+
+Python
+
+def function_name(parameter1, parameter2):
+    # code block
+    # ...
+    return some_value # optional
+💡 Example 1: Basic function
+
+Python
+
+# Define the function
+def greet(name):
+    print(f"Hello, {name}! Welcome.")
+
+# Call the function
+greet("Alice")
+greet("Bob")
