@@ -63,3 +63,34 @@ while init<=limit:
         print('*',end=" ")
     print("")
     init+=1
+
+
+
+def operation():
+    a  = int(input("Enter the 1st num: "))
+    b  = int(input("Enter the 2nd num: "))
+    op = input("Select the operation: + , - , / , * , exit: ")
+
+    while True:
+        if op == "exit":
+            print("Exiting Calculator...")
+            break
+        match op:
+            case '+':
+                print(a+b)
+                operation()
+            case '-':
+                print(a-b)
+                operation()
+            case '*':
+                print(a*b)
+                operation()
+            case '/':
+                print(a/b)
+                operation()
+            case _:
+                print("invalid operator")
+                operation()
+
+
+operation()

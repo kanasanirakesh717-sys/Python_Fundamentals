@@ -68,3 +68,33 @@ def countevenodd(a):
     result = print(f"Even:{even}, Odd:{odd}")
 
 countevenodd([1,23,4,56,77,87,86,56])
+
+
+
+def marks_analyzer():
+    marks = []
+    sub = 1
+    while sub <= 5:
+        mark = int(input(f"Enter the marks of subject {sub}: "))
+        marks.append(mark)
+        sub += 1
+
+    total = sum(marks)
+    avg = total / len(marks)
+
+    print(f"\nMarks: {marks}")
+    print(f"Total Marks: {total}")
+    print(f"Average: {avg:.2f}")
+
+    if avg >= 90:
+        print("Overall Grade: A")
+    elif avg >= 80:
+        print("Overall Grade: B")
+    elif avg >= 70:
+        print("Overall Grade: C")
+    elif avg >= 60:
+        print("Overall Grade: D")
+    else:
+        print("Overall Grade: F")
+
+marks_analyzer()
