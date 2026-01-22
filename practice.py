@@ -93,4 +93,43 @@ def operation():
                 operation()
 
 
-operation()
+# operation()
+
+def string_tool():
+    s = input("Enter the String: ") 
+
+    while True:
+        
+        print(f"1. Count vowels\n2.Reverse string\n3.Check palindrome\n4.Convert case (upper/lower/title)\n5.Exit")
+        user_input = int(input("Choose from above: "))
+
+        if user_input==1:
+            l = ['a','e','i','o','u']
+            count=0
+            for i in s:
+                if i.lower() in l:
+                    count+=1
+            print(f"Vowels present:{count}")
+
+        elif user_input==2:
+            print(f"{s[::-1]}")
+    
+        elif user_input == 3:
+            if s== s[::-1]:
+                print(f"{s} is a palindrome")
+
+            else:
+                print(f"{s} is not palindrome")
+
+        elif user_input==4:
+            print(f"lower:{s.lower()}\nupper:{s.upper()}\n title:{s.title()}")
+
+        elif user_input ==5:
+            print('Exiting from loop')
+            break
+
+        else:
+            print("Invalid num")
+ 
+
+string_tool()
